@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="assets/css/jquery-ui.css">
+    
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon-icon.png"/>
+    <title>Swadhey</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167788155-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-167788155-1');
+    </script>
+</head>
+
+<body>
+    <div class="welcomePopup">
+        <!-- Modal -->
+        <div class="modal fade" id="welcomePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <!-- <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div> -->
+                    <div class="modal-body">
+                        <div class="popupWrapper">
+
+                            <h3>Terms & Conditions</h3>
+                            <div class="termnConditionBlock mCustomScrollbar">
+                                <div class="forVolunteer">
+                                    <h5>For Volunteers :</h5>
+                                    <ul>
+                                        <li><span>Your Responsibilities -</span> To know your responsibilities towards Swadhey.</li>
+                                        <li><span>Privacy -</span> To maintain privacy about Swadhey activities.</li>
+                                        <li><span>Data security & Monitoring -</span> To keep Swadhey data secured.</li>
+                                        <li><span>Expected Behaviour -</span> To maintain good conduct in society while serving people.</li>
+                                        <li><span>Be Kind -</span> To be kind to everyone.</li>
+                                        <li><span>Volunteers Role -</span> To participate in all Swadhey activities as much as you can.</li>
+                                    </ul>
+                                </div>
+                                <div class="forMember">
+                                    <h5>For Membership :</h5>
+                                    <ul>
+                                        <li><span>Membership fee -</span> To become a member you have to pay Rs.250/- per month for the next 6 Consecutive months. If you want to continue further, you can renew the membership for next 6 months. </li>
+                                        <!-- <li><span>Period -</span> The membership period is fixed for 6 months. If you want to continue further, you can renew the membership for next 6 months.</li> -->
+                                        <li><span>Contribution -</span> Members can contribute to Swadhey or donate to needy every month either by cash or kind</li>
+                                        <li><span>Members Role -</span>  Every members is needed to take active participation in all activities carried by Swadhey.</li>
+                                        <li><span>Rights -</span> You will be having rights to vote in Swadhey decisions making & right to suggest for activities in Swadhey which will take Swadhey towards achieving goals to serve needy.</li>
+                                        <!-- <li><span>Socialist -</span>  The goal of socialism is communism. You need to communicate properly with people to whom Swadhey serve.</li> -->
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary yellowBtn " data-dismiss="modal">Accept The Terms</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="memberLogin">
+        <div class="loginWrapper">
+            <div class="container">
+                <div class="loginBlock">
+                    <div class="row">
+                        <div class="col-lg-6 col-6">
+                            <div class="loginLogo">
+                                <a href="index.html"><img src="assets/images/logo.png"></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-6">
+                            <div class="donationHomeIcon">
+
+                            <a href="index.html"><span><i class="fas fa-home"></i></span></a>
+
+                        </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="loginBlock">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="loginQuotes">
+                                <h2>Give monthly, <br>change lives all year long.</h2>
+                                <h5>100% of yours donation help to people in need.</h5>
+                                
+                              
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="loginFormBlock">
+                                <div class="loginList">
+                                    <h4>Register Here</h4>
+                                    <div class="loginlistItem clearfix">
+                                        <ul>
+                                            <li><a href="#" class="activeLogin">As Member</a></li>
+                                            <li><a href="#">As Volunteer</a></li>
+                                        </ul>
+                                    </div>
+                                    
+
+                                    <div class="loginfieldWrap clearfix">
+                                        <div class="loginInput formValid">
+                                            <form method="post" action="member-login.php">
+                                                <ul>
+                                                    <li id="name">
+                                                        <div class="inputBox blue inputbox">
+                                                            <div class="form-group input-material">
+                                                                <input type="text" class="form-control" id="member-name-field" required autocomplete="off" name="name">
+                                                                <label for="member-name-field">Name</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="phone">
+                                                        <div class="inputBox blue inputbox">
+                                                            <div class="form-group input-material">
+                                                                <input type="text" class="form-control" id="member-phone-number" required autocomplete="off" maxlength="10" name="mobile">
+                                                                <label for="member-phone-number">Phone No.</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="emailID">
+                                                        <div class="inputBox blue inputbox">
+                                                            <div class="form-group input-material">
+                                                                <input type="email" class="form-control" id="member-email-id" required autocomplete="off" name="email">
+                                                                <label for="member-email-id">E-Mail ID</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="aadharCard">
+                                                        <div class="inputBox blue inputbox">
+                                                            <div class="form-group input-material">
+                                                                <input type="text" class="form-control" id="member-pancard-id" required autocomplete="off" maxlength="12" name="addharno">
+                                                                <label for="member-pancard-id">PAN Card No.</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="dob">
+                                                        <div class="inputBox blue inputbox">
+                                                            <div class="form-group input-material">
+
+                                                                <input type="text" class="form-control" id="datepicker" name="dob" required autocomplete="off">
+                                                                <label for="birthday">Date Of Birth</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="inputBox inputbox">
+                                                            <div class="form-group input-material">
+                                                                <textarea class="form-control" id="member-textarea-field" rows="3" required name="address"></textarea>
+                                                                <label for="member-textarea-field">Address</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li>
+                                                        <div class="inputBox inputbox">
+                                                            <div class="form-group input-material">
+                                                                <textarea class="form-control" id="member-about-self" rows="3" required name="yourself" maxlength="250"></textarea>
+                                                                <label for="member-about-self">Tell us about yourself? (Education, Job Profile etc)</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <!-- <li>
+                                                        <div class="inputBox inputbox">
+                                                            <div class="form-group input-material">
+                                                                <textarea class="form-control" id="Time" rows="3" required name="availableTime" maxlength="250"></textarea>
+                                                                <label for="textarea-field">When you are available? (Weekdays Or Weekend  - In the Morning, Afternoon, Evening Or Fulltime)</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li> -->
+
+                                                    
+
+                                                    
+
+                                                    <li>
+                                                        <button type="submit" class="btn btn-primary yellowBtn submitBt">Submit</button>
+                                                    </li>
+                                                </ul>
+                                            </form>
+                                        </div>
+
+                                        <div class="loginInput formValid" style="display: none;">
+                                            <form method="post" action="volunteer-login.php">
+                                                <ul>
+                                                    <li id="name">
+                                                        <div class="inputBox blue inputbox">
+                                                            <div class="form-group input-material">
+                                                                <input type="text" class="form-control" id="volunteer-name-field" required autocomplete="off" name="name">
+                                                                <label for="volunteer-name-field">Name</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="phone">
+                                                        <div class="inputBox blue inputbox">
+                                                            <div class="form-group input-material">
+                                                                <input type="text" class="form-control" id="volunteer-phone-number" required autocomplete="off" maxlength="10" name="mobile">
+                                                                <label for="volunteer-phone-number">Phone No.</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="emailID">
+                                                        <div class="inputBox blue inputbox">
+                                                            <div class="form-group input-material">
+                                                                <input type="email" class="form-control" id="volunteer-email-id" required autocomplete="off" name="email">
+                                                                <label for="volunteer-email-id">E-Mail ID</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="aadharCard">
+                                                        <div class="inputBox blue inputbox">
+                                                            <div class="form-group input-material">
+                                                                <input type="text" class="form-control" id="volunteer-pan-card" required autocomplete="off" maxlength="12" name="addharno">
+                                                                <label for="volunteer-pan-card">PAN Card No.</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="dob">
+                                                        <div class="inputBox blue inputbox">
+                                                            <div class="form-group input-material">
+
+                                                                <input type="text" class="form-control" id="datepickerVolunteer" name="dob" required autocomplete="off">
+                                                                <label for="datepickerVolunteer">Date Of Birth</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="inputBox inputbox">
+                                                            <div class="form-group input-material">
+                                                                <textarea class="form-control" id="volunteer-textarea-field" rows="3" required name="address"></textarea>
+                                                                <label for="volunteer-textarea-field">Address</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="inputBox inputbox">
+                                                            <div class="form-group input-material">
+                                                                <textarea class="form-control" id="volunteer-about-self" rows="3" required name="yourself" maxlength="250"></textarea>
+                                                                <label for="volunteer-about-self">Tell us about yourself? (Education, Job Profile etc)</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <!-- <li>
+                                                        <div class="inputBox inputbox">
+                                                            <div class="form-group input-material">
+                                                                <textarea class="form-control" id="Time" rows="3" required name="availableTime" maxlength="250"></textarea>
+                                                                <label for="textarea-field">When you are available? (Weekdays Or Weekend  - In the Morning, Afternoon, Evening Or Fulltime)</label>
+                                                                <div class="error_message">This field is required</div>
+                                                            </div>
+                                                        </div>
+                                                    </li> -->
+
+                                                    <li>
+                                                        <button type="submit" class="btn btn-primary yellowBtn submitBt">Submit</button>
+                                                    </li>
+                                                </ul>
+                                            </form>
+                                        </div>
+                                        
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <div id="footer"></div> -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/fontawesome.js"></script>
+    <script src="assets/js/owl.carousel.js"></script>
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/60596f87067c2605c0bb39e2/1f1elnaus';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+
+</html>
