@@ -1,0 +1,85 @@
+.contestBlock{
+	display: flex;
+    flex-direction: row;
+    justify-content: start;
+    /*-webkit-box-shadow: 4px 3px 18px -2px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 4px 3px 18px -2px rgba(0,0,0,0.75);
+    box-shadow: 4px 3px 18px -2px rgb(0 0 0 / 75%);*/
+    -webkit-box-shadow: 2px 7px 21px -13px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 2px 7px 21px -13px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 7px 21px -13px rgb(0 0 0 / 75%);
+}
+
+.contestBlock .textSec{
+	width: 100%;
+	max-width: 40%;
+	background: #ea3d4b;
+	/*display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;*/
+}
+
+.contestBlock .formSec{
+	width: 100%;
+	max-width: 60%;
+	padding: 30px 30px;
+	background: #ffffff;
+}
+
+
+.formInput .form-control{
+	border: 0;
+    border-bottom: 1px solid #ced4da;
+    border-radius: 0;
+    padding: 0;
+    font-size: 15px;
+    color: #000000;
+}
+
+.formInput .form-control:focus{
+	border-bottom: 1px solid #ea3d4b;
+}
+
+.formInput .yellowBtn{
+	padding: 10px 60px;
+}
+
+.formInput li {
+    margin-bottom: 20px;
+}
+
+.formInput li:last-child {
+    margin-bottom: 0px;
+    margin-top: 40px;
+}
+
+.textSec h2{
+	margin: 0;
+    font-family: 'Poppins-Medium';
+    color: #fff;
+    font-size: 44px;
+    padding: 0;
+    text-align: center;
+    line-height: 50px;
+}
+
+.textSec p{
+	margin: 0;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Poppins-Medium';
+    text-align: center;
+    padding: 20px 40px;
+}
+
+.contestWrap{
+	background: #f9f9f9;
+	    padding: 25px 0;
+}
+
+.formInput label{
+	font-family: 'Poppins-Medium';
+    font-size: 16px;
+    text-transform: capitalize;
+}
