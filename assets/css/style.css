@@ -1564,7 +1564,7 @@ header {
     margin-bottom: 0;
     text-align: center;
     padding: 0 15%;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 28px;
 }
 
@@ -1697,8 +1697,12 @@ footer .footerBlock {
     height: 100%;
 }
 
-.aboutBanner {
+/* .aboutBanner {
     background-image: url(../images/about-banner.jpg);
+} */
+
+.aboutBanner {
+    background-image: url(../images/main_about_banner.jpg);
 }
 
 .eventBanner {
