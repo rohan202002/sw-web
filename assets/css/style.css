@@ -1705,7 +1705,7 @@ footer .footerBlock {
 } */
 
 .aboutBanner {
-    background-image: url(../images/main_about_banner.jpg);
+    background-image: url(../images/about_latest_banner.jpg);
 }
 
 .eventBanner {
@@ -1722,6 +1722,10 @@ footer .footerBlock {
 
 .contactBanner {
     background-image: url(../images/contact-banner.jpg);
+}
+
+.support_Banner {
+    background-image: url(../images/supporter_bg-image-for\ page.jpg);
 }
 
 .galleryBanner {
