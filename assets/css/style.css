@@ -1233,6 +1233,7 @@ header {
 
 .eventWrapper {
     width: 100%;
+    position: relative;
 }
 
 .eventWrapper .eventImgblock {
@@ -5696,7 +5697,7 @@ ul.firstRow li {
     display: none !important;
 }
 
-
+/* LOGO 80G section css start */
 footer .Logo_80_Block {
     margin-bottom: 20px;
 }
@@ -5712,6 +5713,37 @@ footer .Logo_80_Block img {
     footer .Logo_80_Block img {
         margin-top: 10px;
         position: absolute;
-    }
-    
+    } 
 }
+/* LOGO 80G section css END */
+
+@media (min-width: 573px) and (max-width: 780px) {
+    .inspireMessage {
+        height: 500px;
+    }
+}
+
+@media (min-width: 312px) and (max-width: 460px) {
+    .inspireMessage {
+        height: 600px;
+    }
+}
+
+/* .inspireText .item .testimonialsContent {
+    background-color: grey;
+} */
+
+@media screen and (max-width: 311px) {
+    .inspireText {
+        display: none;
+    }
+    .inspireMessage {
+        height: 400px;
+    }
+}
+
+/* @media screen and (max-width: 1199px) {
+    .projectWrapper .eventImgblock img {
+        float: right;
+    }
+} */
