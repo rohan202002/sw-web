@@ -42,6 +42,36 @@
             transform: translate(-50%, -50%);
         }
 
+        .testimonialsText .testimonialsContent h5 {
+            /* color: #eda90b; */
+            /* color: #f98407; */
+            color: #ffffff;
+            font-size: 28px;
+        }
+
+        .inspireMessage{
+            position: relative;
+            /* width: 100%; */
+            height: 500px; /* Adjust as needed */
+            background-size: cover;
+            background-position: center;
+            animation: slideBackground 14s infinite linear; /* Adjust duration as needed */
+        }
+
+        @keyframes slideBackground {
+            0% { background-image: url('assets/images/treeplantation2.jpg'); }
+            33% { background-image: url('assets/images/causes-three.jpg'); }
+            66% { background-image: url('assets/images/diwaliank-7.jpg'); }
+            100% { background-image: url('assets/images/fortconservation2-1.jpg'); }
+        }
+
+        /* @keyframes slideBackground {
+            0%, 100%{ background-image: url('assets/images/about-img.jpg'); }
+            33% { background-image: url('assets/images/about-banner.jpg'); }
+            66% { background-image: url('assets/images/beachcleaning6-3.jpg'); }
+        } */
+
+
     </style>
 </head>
 
@@ -487,24 +517,14 @@
             <div class="container">
                 <div class="conterBlock">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="counter clearfix counter_mobileSpace">
-                                <div class="counterImgBlock">
-                                    <img class="img-fluid" src="assets/images/counter-donation.png">
-                                </div>
-                                <div class="counterText">
-                                    <h2 class="timer count-title count-number">2,15,000+</h2>
-                                    <p class="count-text ">Received Donations</p>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="col-lg-3 col-md-6">
                             <div class="counter clearfix counter_mobileSpace">
                                 <div class="counterImgBlock">
                                     <img class="img-fluid" src="assets/images/counter-two.png">
                                 </div>
                                 <div class="counterText">
-                                    <h2 class="timer count-title count-number">250+</h2>
+                                    <h2 class="timer count-title count-number">300+</h2>
                                     <p class="count-text ">Our Donors</p>
                                 </div>
                             </div>
@@ -526,8 +546,19 @@
                                     <img class="img-fluid" src="assets/images/help.png">
                                 </div>
                                 <div class="counterText">
-                                    <h2 class="timer count-title count-number">57+</h2>
+                                    <h2 class="timer count-title count-number">60+</h2>
                                     <p class="count-text ">Activities Done</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="counter clearfix counter_mobileSpace">
+                                <div class="counterImgBlock">
+                                    <img class="img-fluid" src="assets/images/counter-donation.png">
+                                </div>
+                                <div class="counterText">
+                                    <h2 class="timer count-title count-number">3,00,000+</h2>
+                                    <p class="count-text ">Received Donations</p>
                                 </div>
                             </div>
                         </div>
@@ -557,29 +588,6 @@
                         <div class="col-lg-9">
                             <div class="missionDiv">
                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="goalBlock">
-                                            <div class="goalContent">
-                                                <div class="gloalImg">
-                                                    <span><i class="fas fa-hands-helping"></i></span>
-                                                </div>
-                                                <span class="headingArrow missionArrow"></span>
-                                                <h3>Fly Together</h3>
-
-                                            </div>
-                                            <div class="overlay_content">
-                                                <p>We primarily focus on aiding people...</p>
-                                                <!-- <span class="headingArrow missionArrow"></span> -->
-                                                <h3>"Fly Together"</h3>
-                                                <a href="Objectives.html">Read More</a>
-                                                <div class="iconBgimg">
-                                                    <!-- <img class="img-fluid" src="assets/images/overlay-home.png"> -->
-                                                    <i class="fas fa-hands-helping"></i>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
                                     
                                     <div class="col-lg-6 col-md-6">
                                         <div class="goalBlock">
@@ -602,6 +610,30 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="goalBlock">
+                                            <div class="goalContent">
+                                                <div class="gloalImg">
+                                                    <span><i class="fas fa-hands-helping"></i></span>
+                                                </div>
+                                                <span class="headingArrow missionArrow"></span>
+                                                <h3>Fly Together</h3>
+
+                                            </div>
+                                            <div class="overlay_content">
+                                                <p>We primarily focus on aiding people...</p>
+                                                <!-- <span class="headingArrow missionArrow"></span> -->
+                                                <h3>"Fly Together"</h3>
+                                                <a href="Objectives.html">Read More</a>
+                                                <div class="iconBgimg">
+                                                    <!-- <img class="img-fluid" src="assets/images/overlay-home.png"> -->
+                                                    <i class="fas fa-hands-helping"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="missionDiv">
@@ -636,12 +668,13 @@
                                                     <span><i class="fab fa-fort-awesome"></i></span>
                                                 </div>
                                                 <span class="headingArrow missionArrow"></span>
-                                                <h3>"वारसा"-Fort Conservation</h3>
+                                                <h3>"वारसा"</h3>
                                             </div>
                                             <div class="overlay_content">
                                                 <p>This project conserns the development of forts in Maharashtra...</p>
                                                 <!-- <span class="headingArrow missionArrow"></span> -->
-                                                <h3>"वारसा-Fort Conservation"</h3>
+                                                <!-- <h3>"वारसा-Fort Conservation"</h3> -->
+                                                <h3>"वारसा"</h3>
                                                 <a href="Objectives.html">Read More</a>
                                                 <div class="iconBgimg">
                                                     <!-- <img class="img-fluid" src="assets/images/overlay-home.png"> -->
@@ -981,12 +1014,107 @@
                 <div class="inspireMessageBlock">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="inspireText" data-aos="fade-down" data-aos-duration="900" ata-aos-offset="500" data-aos-easing="ease-in-sine">
-                                <h2>"I'm not a handsome guy, but I can give my hand to someone who needs help. Beauty is in the heart, not in the face." <br><span>- Dr. APJ Abdul Kalam</span></h1>
-                                    <div class="inspreBtnwrap">
-                                        <p><a href="javascript:void(0);" class="yellowBtn">Join us & Become a Volunteer</a></p>
+
+                            <div class="inspireText" data-aos="fade-down" data-aos-duration="900" data-aos-offset="500" data-aos-easing="ease-in-sine">
+                                <section class="testimonials">
+                                    <div class="testimonialWrapper" id="testimonialBackground">
+                                        <div class="container">
+                                            <div class="testimonialBlock">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="testimonialDiv owl-carousel owl-theme">
+                                                            <div class="item">
+                                                                <div class="testimonialsText">
+                                                                    <div class="testimonialsContent"><br><br>
+                                                                        <h5><i>"Be the change you wish to see in your community. Join us as a member and volunteer to make a difference."</i></h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="testimonialsText">
+                                                                    <div class="testimonialsContent"><br><br>
+                                                                        <h5><i>"Make your time count. Join us as a volunteer and be part of something meaningful."</i></h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="testimonialsText">
+                                                                    <div class="testimonialsContent"><br><br>
+                                                                        <h5><i>"Together, we can achieve more. Join our team as a member and volunteer to create positive change."</i></h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <div class="testimonialsText">
+                                                                    <div class="testimonialsContent"><br><br>
+                                                                        <h5><i>"Become a part of something bigger than yourself. Join us as a member and volunteer to impact lives."</i></h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <div class="testimonialsText">
+                                                                    <div class="testimonialsContent"><br><br>
+                                                                        <h5><i>"Join our passionate community of volunteers and members, where every effort counts towards a brighter future."</i></h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <div class="testimonialsText">
+                                                                    <div class="testimonialsContent"><br><br>
+                                                                        <h5><i>"Volunteer your time, lend your skills, and make a difference. Join us today as a member and volunteer."</i></h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <div class="testimonialsText">
+                                                                    <div class="testimonialsContent"><br><br>
+                                                                        <h5><i>"Your commitment can change lives. Join us as a member and volunteer to create lasting impact."</i></h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <div class="testimonialsText">
+                                                                    <div class="testimonialsContent"><br><br>
+                                                                        <h5><i>"Discover the joy of giving back. Join our dedicated team of members and volunteers today."</i></h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <div class="testimonialsText">
+                                                                    <div class="testimonialsContent"><br><br>
+                                                                        <h5><i>"Together, let's build a better world. Join us as a member and volunteer to be part of the solution."</i></h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="item">
+                                                                <div class="testimonialsText">
+                                                                    <div class="testimonialsContent"><br><br>
+                                                                        <h5><i>"Join hands with us to serve humanity. Become a member and volunteer today, and let your actions speak louder than words."</i></h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                </section>
+                                <div class="inspreBtnwrap">
+                                    <p><a href="javascript:void(0);" class="yellowBtn">Join us & Become a Volunteer</a></p>
+                                </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -1324,6 +1452,13 @@
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
     })();
+
+    // edit by RS
+    
+
+
+
+
     </script>
     <!--End of Tawk.to Script-->
 </body>
