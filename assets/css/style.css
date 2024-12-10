@@ -1686,7 +1686,8 @@ footer .developerBlock p {
 
 
 footer .footerBlock {
-    padding: 50px 0;
+    /* padding: 50px 0; */
+    padding: 50px 0px 90px;
 }
 
 .inneraboutWrapeer {
@@ -5693,4 +5694,24 @@ ul.firstRow li {
 /* Hide the navigation arrows */
 .owl-nav {
     display: none !important;
+}
+
+
+footer .Logo_80_Block {
+    margin-bottom: 20px;
+}
+
+footer .Logo_80_Block img {
+    width: 106px;
+}
+
+@media screen and (min-width: 949px) {
+    footer .Logo_80_Block {
+        margin-top: 20px;
+    }
+    footer .Logo_80_Block img {
+        margin-top: 10px;
+        position: absolute;
+    }
+    
 }
