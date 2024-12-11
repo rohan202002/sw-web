@@ -5248,6 +5248,12 @@ ul.firstRow li {
         font-size: 25px;
     }
 
+    .eventImgblock img {
+        height: 23rem;
+    }
+
+
+
     .projectWrapper .eventImgblock {
         width: 100%;
         float: left;
@@ -5724,6 +5730,15 @@ footer .Logo_80_Block img {
         margin-left: -63px;
         margin-top: 10px;
         position: absolute;
+    }
+
+    /* by rs */
+    .eventWrapper .eventImgblock img {
+        height: 38rem;
+    } 
+
+    .projectWrapper .eventImgblock img {
+        height: 36rem;
     } 
 }
 /* LOGO 80G section css END */
