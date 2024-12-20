@@ -33,7 +33,7 @@ CONTENTS:
 		height: 100%;
 		max-width: 100%;
 		outline: none;
-		direction: ltr;
+		/* direction: ltr; */
 	}
 
 	.mCSB_container{ /* contains the original content */
@@ -54,12 +54,12 @@ y-axis
 	.mCSB_inside > .mCSB_container{ margin-right: 30px; }
 
 	.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-right: 0; } /* non-visible scrollbar */
-	
+
 	.mCS-dir-rtl > .mCSB_inside > .mCSB_container{ /* RTL direction/left-side scrollbar */
 		margin-right: 0;
 		margin-left: 30px;
 	}
-	
+
 	.mCS-dir-rtl > .mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-left: 0; } /* RTL direction/left-side scrollbar */
 
 	.mCSB_scrollTools{ /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
@@ -73,13 +73,13 @@ y-axis
 	}
 
 	.mCSB_outside + .mCSB_scrollTools{ right: -26px; } /* scrollbar position: outside */
-	
+
 	.mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools, 
 	.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ /* RTL direction/left-side scrollbar */
 		right: auto;
 		left: 0;
 	}
-	
+
 	.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ left: -26px; } /* RTL direction/left-side scrollbar (scrollbar position: outside) */
 
 	.mCSB_scrollTools .mCSB_draggerContainer{ /* contains the draggable element and dragger rail markup */
@@ -87,7 +87,7 @@ y-axis
 		top: 0;
 		left: 0;
 		bottom: 0;
-		right: 0; 
+		right: 0;
 		height: auto;
 	}
 
@@ -115,10 +115,10 @@ y-axis
 		-webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
 		text-align: center;
 	}
-	
+
 	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
 	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{ width: 12px; /* auto-expanded scrollbar */ }
-	
+
 	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
 	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{ width: 8px; /* auto-expanded scrollbar */ }
 
@@ -134,7 +134,6 @@ y-axis
 	}
 
 	.mCSB_scrollTools .mCSB_buttonDown{ bottom: 0; }
-
 
 
 /* 
