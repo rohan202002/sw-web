@@ -1852,7 +1852,7 @@ footer .footerBlock {
     background-color: #ea3d4b;
     position: absolute;
     bottom: 5px;
-    left: 0;
+    left: 11px; /* BY RS  0px*/
     transition: all 0.5s;
 }
 
@@ -1864,7 +1864,7 @@ footer .footerBlock {
     position: absolute;
     bottom: 0;
     transition: all 0.5s;
-    left: 0;
+    left: 11px; /* BY RS 0px */
 }
 
 .innereventContent p {
