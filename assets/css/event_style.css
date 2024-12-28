@@ -10,6 +10,12 @@
     min-height: 100vh;
 } */
 
+/* Options changeing start */
+#yearSelect::-ms-expand {
+    display: none;
+}
+/* Options changeing End */
+
 #yearSelect {
     margin-left: 20px;
     font-size: 15px;
@@ -24,15 +30,17 @@
     padding: 5px;
     border: none;
     border-bottom: 3px solid #c5c5c5;
+    cursor: pointer;
 }
 
 
 #yearSelect option {
     width: 80px;
     height: 40px;
+    cursor: pointer;
 }
 
-select.styled-select option:hover {
+#yearSelect option:hover {
     background-color: yellow;
     color: white;
 }
@@ -358,10 +366,12 @@ select.styled-select option:hover {
 
 /* Style the dropdown options */
 .styled-select option {
-    font-size: 16px;
+    font-size: 14px;
+    height: 30px;
     background-color: #fff; /* Default background */
     color: #333; /* Default text color */
     padding: 10px;
+    cursor: pointer;
 }
 
 /* Hover effect on options */

@@ -5773,3 +5773,9 @@ footer .Logo_80_Block img {
         float: right;
     }
 } */
+
+@media screen and (width: 1024px) {
+    .aboutUs .leftimgBlock #we_are_img {
+        height: 704px;
+    }
+}

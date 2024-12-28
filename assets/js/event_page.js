@@ -190,6 +190,30 @@
 
 
 
+// document.querySelectorAll('.slider-container').forEach(container => {
+//     const slider = container.querySelector('.slider');
+//     const slides = slider.children;
+//     const prevButton = container.querySelector('.prev');
+//     const nextButton = container.querySelector('.next');
+//     let currentIndex = 0;
+
+//     const updateSliderPosition = () => {
+//         slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+//     };
+
+//     prevButton.addEventListener('click', () => {
+//         currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
+//         updateSliderPosition();
+//     });
+
+//     nextButton.addEventListener('click', () => {
+//         currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+//         updateSliderPosition();
+//     });
+// });
+  
+
+
 document.querySelectorAll('.slider-container').forEach(container => {
     const slider = container.querySelector('.slider');
     const slides = slider.children;
@@ -201,17 +225,31 @@ document.querySelectorAll('.slider-container').forEach(container => {
         slider.style.transform = `translateX(-${currentIndex * 100}%)`;
     };
 
+    const showNextSlide = () => {
+        currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+        updateSliderPosition();
+    };
+
+    let autoSlideInterval = setInterval(showNextSlide, 3000);
+
     prevButton.addEventListener('click', () => {
+        clearInterval(autoSlideInterval);
         currentIndex = (currentIndex > 0) ? currentIndex - 1 : slides.length - 1;
         updateSliderPosition();
+        autoSlideInterval = setInterval(showNextSlide, 3000);
     });
 
     nextButton.addEventListener('click', () => {
+        clearInterval(autoSlideInterval);
         currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
         updateSliderPosition();
+        autoSlideInterval = setInterval(showNextSlide, 3000);
     });
+
+    container.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+    container.addEventListener('mouseleave', () => autoSlideInterval = setInterval(showNextSlide, 3000));
 });
-  
+
 
 
 
