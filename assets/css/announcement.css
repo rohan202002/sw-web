@@ -1,0 +1,91 @@
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal content */
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    max-width: 600px;
+    height: auto;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button with cross symbol */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000; /* Ensure it's visible against the modal background */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1100; /* Ensure it appears above all other content */
+}
+
+.close:hover {
+    color: #ff0000; /* Highlight close button on hover */
+}
+
+/* Slider styling */
+.slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 489px;
+}
+
+.slides {
+    display: none;
+    width: 100%;
+    height: 20rem;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.slides h1 {
+    margin-left: 12rem;
+    margin-top: 10rem;
+    color: #fff;
+    position: absolute;
+}

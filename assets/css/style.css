@@ -5735,6 +5735,7 @@ footer .Logo_80_Block img {
     /* by rs */
     .eventWrapper .eventImgblock img {
         height: 38rem;
+        width: 100%;
     } 
 
     .projectWrapper .eventImgblock img {
