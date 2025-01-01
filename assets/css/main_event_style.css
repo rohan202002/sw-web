@@ -1,9 +1,9 @@
 
-/* #yearSelect::-ms-expand {
+#yearSelect::-ms-expand {
     display: none;
-} */
+}
 
-/* #yearSelect {
+#yearSelect {
     margin-left: 20px;
     font-size: 20px;
     font-weight: 600;
@@ -36,7 +36,7 @@
 #yearSelect:hover {
     border: none;
     border-bottom: 3px solid #898181;
-} */
+}
 
 .unique_container ::-webkit-scrollbar {
     width: 8px;
@@ -274,9 +274,9 @@
 
 
   
-/* .styled-select {
-    width: 200px; 
-    height: 40px;
+.styled-select {
+    width: 200px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
     font-size: 16px;
     padding: 5px;
     border: 1px solid #ccc;
@@ -290,8 +290,8 @@
 .styled-select option {
     font-size: 14px;
     height: 30px;
-    background-color: #fff; 
-    color: #333; 
+    background-color: #fff; /* Default background */
+    color: #333; /* Default text color */
     padding: 10px;
     cursor: pointer;
 }
@@ -309,7 +309,7 @@
 .styled-select option[disabled] {
     background-color: #fff;
     font-style: italic;
-} */
+}
 
 
 .unique_container:hover .innereventContent h3:before {
@@ -454,25 +454,34 @@
     cursor: pointer;
 }
 
-@media screen and (width: 1024px){
-    .dropdown button {
-        margin-left: 61px;
-    }
-
+select.styled-select option {
+    /* font-weight: bold; */
+    padding-inline: 10px;
+    white-space: normal;
+    display: flex;
 }
 
-.selectyearSec .dropdown-toggle {
-    margin-top: -172px;
+/* Style the option */
+select.styled-select option {
+    width: 200px; /* Change width */
+    height: 30px; /* Change height */
+    padding-left: 20px; /* Add padding from the left */
+    background-color: white; /* Default background */
+    color: black; /* Default text color */
+    border: none; /* Optional: Remove border */
+    cursor: pointer; /* Add a pointer cursor */
 }
 
-.event {
-    margin-top: -78px;
+/* Change the background color when hovered */
+select.styled-select option:hover {
+    background-color: yellow; /* Change to yellow on hover */
+    color: black; /* Ensure text is readable */
 }
 
-.selectyearSec .dropdown-toggle::after {
-    margin-left: 69px;
+#opt_all:hover {
+    background-color: yellow; /* Change to yellow on hover */
+    color: black; /* Ensure text is readable */
 }
 
-.dropdown-menu {
-    min-width: 13rem;
-}
+
+

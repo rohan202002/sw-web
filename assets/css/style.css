@@ -5740,6 +5740,7 @@ footer .Logo_80_Block img {
 
     .projectWrapper .eventImgblock img {
         height: 36rem;
+        width: 100%;
     } 
 }
 /* LOGO 80G section css END */
@@ -5778,5 +5779,19 @@ footer .Logo_80_Block img {
 @media screen and (width: 1024px) {
     .aboutUs .leftimgBlock #we_are_img {
         height: 704px;
+    }
+}
+
+
+@media screen and (max-width: 380px) {
+    .UD_image .img-fluid {
+        margin-top: 618px;
+    }
+}
+
+
+@media (min-width: 770px) and (max-width: 1450px) {
+    .UD_image .img-fluid {
+        margin-top: 152px;
     }
 }

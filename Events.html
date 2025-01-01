@@ -25,6 +25,7 @@
 
     <style>
        
+
     </style>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -119,16 +120,36 @@
 
                         <div class="col-lg-12">
                             <div class="selectyearSec">
-                                <select id="yearSelect" class="styled-select" onchange="filterEvents()">
-                                    <option disabled selected value="2024"><b>Select Year</b></option>
-                                    <!-- <option value="2025">2025</option> -->
-                                    <option value="2024">2024</option>
-                                    <option value="2023">2023</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2021">2021</option>
-                                    <option value="2020">2020</option>
+                                <!-- <select id="yearSelect" class="styled-select" onchange="filterEvents()">
+                                    <option disabled selected value="2024" id="opt_all"><b>Select Year</b></option>
+                                    <option value="2025">2025</option>
+                                    <option value="2024" id="opt_all">2024</option>
+                                    <option value="2023" id="opt_all">2023</option>
+                                    <option value="2022" id="opt_all">2022</option>
+                                    <option value="2021" id="opt_all">2021</option>
+                                    <option value="2020" id="opt_all">2020</option>
 
-                                </select>
+                                </select> -->
+
+
+                                <div class="container mt-5">
+                                    <div class="dropdown">
+                                        <button class="btn btn-light dropdown-toggle year-button" type="button" id="yearDropdown yearButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Select Year
+                                        </button>
+                                        <ul class="dropdown-menu" id="year_Select" aria-labelledby="yearDropdown"  onchange="filterEvents()">
+                                            <li  value="2024"><a class="dropdown-item year-link" href="#"  data-year="2024">2024</a></li>
+                                            <li  value="2023"><a class="dropdown-item year-link" href="#"  data-year="2023">2023</a></li>
+                                            <li  value="2022"><a class="dropdown-item year-link" href="#"  data-year="2022">2022</a></li>
+                                            <li  value="2021"><a class="dropdown-item year-link" href="#"  data-year="2021">2021</a></li>
+                                            <li  value="2020"><a class="dropdown-item year-link" href="#"  data-year="2020">2020</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+
                             </div>
                         </div>
                     </div>
@@ -3627,7 +3648,7 @@
                                         <div class="slide">
                                           <img src="assets/images/healthcamp1.4.jpg" alt=""/>
                                         </div>
-                                      <div id="button-prev" class="slider-button"> < </div>
+                                      <div id="button-prev" class="slider-button"> </div>
                                       <div id="button-next" class="slider-button"> > </div>
                                       <div class="dots-container">
                                         <div class="dot activeDot"></div>
@@ -3694,29 +3715,41 @@
 
 
 
+    <!-- Custom JS -->
     <script>
-        function filterEvents() {
-            // Get selected year from dropdown
-            const selectedYear = document.getElementById("yearSelect").value;
-
-            // Get all event elements
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownItems = document.querySelectorAll(".dropdown-item");
             const events = document.querySelectorAll(".event");
 
-            // Show events matching the selected year and hide others
-            events.forEach(event => {
-                if (event.dataset.year === selectedYear) {
-                    event.style.display = "block";
-                } else {
-                    event.style.display = "none";
-                }
-            });
-        }
+            dropdownItems.forEach(item => {
+                item.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const selectedYear = this.getAttribute("data-year");
 
-        // Initial filter to display events for the default year
-        window.onload = function() {
-            filterEvents();
-        };
+                    // Hide all events
+                    events.forEach(event => {
+                        event.style.display = "none";
+                    });
+
+                    // Show the selected year's events
+                    const eventToShow = document.querySelector(`.event[data-year="${selectedYear}"]`);
+                    if (eventToShow) {
+                        eventToShow.style.display = "block";
+                    }
+
+                    document.getElementById("yearButton").innerHTML = `${selectedYear}`;
+                    // document.getElementById("yearButton").textContent = `${selectedYear}`;
+                });
+            });
+
+            // Default: Show the first year's events (2024)
+            document.querySelector('.event[data-year="2024"]').style.display = "block";
+        });
+
+
+
     </script>
+
     <script src="assets/js/event_page.js"></script>
 
 
@@ -3725,6 +3758,8 @@
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="assets/js/jquery-3.4.1.min.js"></script>
 
     <script src="assets/js/popper.min.js"></script>

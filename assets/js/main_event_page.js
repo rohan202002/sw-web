@@ -254,36 +254,14 @@ document.querySelectorAll('.slider-container').forEach(container => {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const yearLinks = document.querySelectorAll(".year-link"); // Add links with class 'year-link' for each year
-    const events = document.querySelectorAll(".event");
-    const yearButton = document.querySelector("#yearButton"); // Button to display the selected year
 
-    // Initially set the default year
-    const defaultYear = "2024";
-    document.querySelector(`.event[data-year="${defaultYear}"]`).style.display = "block";
-    yearButton.textContent = defaultYear; // Set default year text on the button
 
-    // Add click event listener to each year link
-    yearLinks.forEach((link) => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
 
-            const selectedYear = this.getAttribute("data-year");
 
-            // Hide all events
-            events.forEach((event) => {
-                event.style.display = "none";
-            });
 
-            // Show events for the selected year
-            const eventToShow = document.querySelector(`.event[data-year="${selectedYear}"]`);
-            if (eventToShow) {
-                eventToShow.style.display = "block";
-            }
 
-            // Update the button text
-            yearButton.textContent = selectedYear;
-        });
-    });
-});
+
+
+  
+
+
