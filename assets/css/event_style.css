@@ -74,7 +74,8 @@
 
 .unique_container .image-container img {
     width: 100%;
-    height: 125%;
+    height: 100%;
+    /* height: 78%; */
     object-fit: cover;
 }
 
