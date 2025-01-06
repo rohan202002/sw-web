@@ -226,6 +226,10 @@
     .event .container {
         gap: 52px;
     }
+
+    .unique_container .image-container img {
+        height: 108%;
+    }
 }
 
 @media screen and (min-width: 950px) {
