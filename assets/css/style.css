@@ -1257,7 +1257,7 @@ header {
 
 .eventText p {
     margin-bottom: 0;
-    padding: 20px 0;
+    padding: 15px 0;
     line-height: 28px;
 }
 
@@ -1282,7 +1282,7 @@ header {
 }
 
 .eventCalenderWrap .eventDate {
-    font-size: 27px;
+    font-size: 22px;
 }
 
 .eventCalenderWrap p {
@@ -5780,6 +5780,10 @@ footer .Logo_80_Block img {
     .aboutUs .leftimgBlock #we_are_img {
         height: 704px;
     }
+    .yellowBtn {
+        margin-top: -26px;
+    }
+    
 }
 
 
@@ -5794,4 +5798,11 @@ footer .Logo_80_Block img {
     .UD_image .img-fluid {
         margin-top: 152px;
     }
+}
+
+@media screen and (width: 1440px) {
+    .yellowBtn {
+        margin-top: -9px;
+    }
+    
 }
