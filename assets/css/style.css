@@ -5806,3 +5806,59 @@ footer .Logo_80_Block img {
     }
     
 }
+
+
+
+/* Ensure dropdown and submenus work properly in mobile view */
+/* .navbar-nav .nav-item .dropdown-menu {
+    position: relative;
+    display: none;
+    background-color: #fff;
+    border: none;
+    width: 100%;
+    box-shadow: none; 
+} */
+
+
+
+/* Responsive styling for dropdowns */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: #fff;
+    }
+
+    .navbar-nav .nav-item .dropdown-menu {
+        position: static;
+    }
+
+    .navbar-toggler {
+        /* background-color: #ea3d4b; */
+        color: #fff;
+        border: none;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff;
+    }
+
+    .navbar-nav .nav-item:hover > .dropdown-menu,
+    .navbar-nav .nav-item .dropdown-menu.show {
+        display: block;
+    }
+
+    .navbar-nav .dropdown-menu .submenu {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%; /* Expand submenu for mobile */
+    }
+
+    .navbar-nav .dropdown-menu .submenu .dropdown-item {
+        padding-left: 20px; /* Indent for submenu items */
+    }
+
+    .dropdown-menu {
+        margin: 8px 10px;
+    }
+}
+
