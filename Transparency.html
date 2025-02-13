@@ -241,7 +241,7 @@
                                   <div class="filter-section">
                                     <select id="filterSelect" class="form-control">
                                       <!-- <option value="all"> Our Transparency</option> -->
-                                      <option value="" disabled selected>Select Transparency</option>
+                                      <option value="" disabled selected>Select</option>
                                       <option value="certificates">Certificates & Registrations</option>
                                       <option value="audit">Audit Reports</option>
                                       <option value="appreciation">Our Appreciation</option>
@@ -324,7 +324,7 @@
                                       <!-- Dropdown 3 -->
                                       <div class="dropdown">
                                         <div class="dropdown-heading" data-target="#content3">
-                                          APPROVAL LETTER <span class="arrow"></span>
+                                          CSR LETTER <span class="arrow"></span>
                                         </div>
                                         <div id="content3" class="dropdown-content">
                                           <!-- <p>This section contains details about the 12th Marksheet, including grades and subjects.</p> -->
@@ -669,6 +669,21 @@
             $('.dropdown-toggle').dropdown();
         });
     </script>
+
+    <script>
+      // Disable Print Screen
+      $(window).keyup(function(e){
+        if(e.keyCode == 44){
+          $("body").hide();
+        }
+      });
+
+      // Disable Right Click
+      $(document).on("contextmenu", function(e){
+          return false;
+      });
+    </script>
+
 
     
   </body>
