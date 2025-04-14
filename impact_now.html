@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Hunger-Free America</title>
+    <style>
+        .main-container {
+            background-color: #ea3d4b;
+            width: 100%;
+            transition: transform 0.3s ease-in-out;
+            /* margin-top: 11px; */
+            /* margin-bottom: 20px; */
+            /* margin: 50px auto; */
+            /* background: white; */
+            /* padding: 20px; */
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+            /* border-radius: 8px; */
+        }
+        .main-container:hover {
+            transform: scale(1.05);
+        }
+        .main-container .main-heading {
+            font-size: 28px;
+            font-weight: bold;
+            color: #fffefe; 
+            text-align: center;
+        }
+        .main-container .main-para {
+            margin-top: -11px;
+            font-size: 18px;
+            color: #ffffff;
+        }
+        .impact-cls {
+            font-weight:600;
+            color: #ea3d4b;
+        }
+        .impact-head {
+            font-weight: 600;
+            color: #b40f0f;
+        }
+        /* .main-container.section {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .main-container .section h3 {
+            font-size: 18px;
+            color: #222;
+            font-weight: bold;
+        }
+        .main-container .section p {
+            font-size: 14px;
+            color: #666;
+        }*/
+
+        .main-container .icon {
+            color: #f4a900;
+            font-size: 20px;
+            margin-right: 10px;
+        } 
+        body {
+            /*background-color: #4a582d;*/
+            /* color: white; */
+            /* font-family: Arial, sans-serif;*/
+            font-family: 'Poppins-Medium';
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /*gap: 40px;*/
+            /* padding: 20px; */
+            box-sizing: border-box;
+            /* font-family: Arial, sans-serif; */
+            text-align: center;
+        }
+        .hor_row {
+            height: 4px;
+            width: 100%;
+            background-color: #b40f0f;
+        }
+        .container, .re-container {
+            /* background-color: #d3d4d1; */
+            display: flex;
+            /*max-width: 1000px;*/
+            width: 100%;
+            padding: 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .text-section {
+            flex: 1;
+            max-width: 500px;
+            animation: fadeIn 1s ease-in;
+        }
+        .text-section h1 {
+            font-size: clamp(24px, 4vw, 32px);
+            font-weight: bold;
+        }
+        .text-section p {
+            font-size: clamp(16px, 2.5vw, 18px);
+            line-height: 1.6;
+            text-align: left;
+        }
+       
+        /* Laptop View - Image Grid */
+        .image-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            flex: 1;
+            max-width: 450px;
+            animation: slideIn 1s ease-in-out;
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        .image-section img:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        /* Second container - Different background color */
+        /* .container:nth-child(2) {
+            background-color: #3d748f;
+            padding: 20px;
+            border-radius: 10px;
+        } */
+
+        /* Mobile View - Full Width Images & Scroll */
+        @media (max-width: 768px) {
+            .container, .re-container {
+                /* flex-direction: column; */
+                align-items: center;
+                text-align: center;
+            }
+            .re-container {
+                flex-direction: column;
+            }
+            .container {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .container .image-wrapper {
+                order: -1; /* Move image section above text */
+            }
+            .container .text-section {
+                order: 2;
+            }
+            .image-wrapper {
+                position: relative;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /* order: -1; */
+            }
+            .image-section {
+                display: flex;
+                overflow-x: auto;
+                scroll-behavior: smooth;
+                scroll-snap-type: x mandatory;
+                width: 100%;
+                padding-bottom: 10px;
+                gap: 10px;
+                white-space: nowrap;
+                max-width: none;
+            }
+            .image-section img {
+                flex: 0 0 100%;
+                width: 100%;
+                height: auto;
+                max-height: 350px;
+                border-radius: 5px;
+                /* order: -1; */
+                scroll-snap-align: center;
+            }
+            .text-section {
+                /* order: 2; */
+                max-width: 90%;
+                padding-left: 10px;
+            }
+            .image-section::-webkit-scrollbar {
+                display: none;
+            }
+           
+            /* Previous & Next Buttons */
+            .scroll-btn {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.6);
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 20px;
+                border-radius: 5px;
+                z-index: 10;
+            }
+            .prev-btn {
+                left: 10px;
+            }
+            .next-btn {
+                right: 10px;
+            }
+            .edu-growth-container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            
+        }
+
+        /* Hide Buttons for Laptop View */
+        @media (min-width: 769px) {
+            .container-mobile {
+                display: none;
+            }
+            .scroll-btn {
+                display: none;
+            }
+            .content {
+                display: flex;
+                margin-left: 205px;
+            }
+            .text-section {
+                margin-left: 27px;
+                margin-right: 27px;
+            }
+            .image-wrapper {
+                margin-top: 23px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* styles for quotes at last of the impact */
+        .edu-growth-container {
+            width: 100%;
+            /* max-width: 800px; */
+            background: white;
+            padding: 20px;
+            /* border-radius: 10px; */
+            text-align: center;
+            /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+            /* transition: transform 0.3s ease-in-out; */
+        }
+        /* .edu-growth-container:hover {
+            transform: scale(1.05);
+        } */
+        .edu-growth-title1,.edu-growth-title2,.edu-growth-title3,.edu-growth-title4 {
+            font-size: 24px;
+            font-weight: bold;
+            /* color: #2c7a2c; */
+            /* color: #3b5998; */
+        }
+        .edu-growth-title1,.edu-growth-content1 {
+            color: #cab430;
+        }
+        .edu-growth-title2,.edu-growth-content2 {
+            color: #162095;
+        }
+        .edu-growth-title3,.edu-growth-content3 {
+            color: #2c7a2c;
+        }
+        .edu-growth-title4,.edu-growth-content4 {
+            color: #df9513;
+        }
+        .edu-growth-content1,.edu-growth-content2,.edu-growth-content3,.edu-growth-content4 {
+            font-size: 18px;
+            margin-top: 10px;
+            /* color: #555; */
+        }
+        .edu-growth-emoji {
+            font-size: 30px;
+        }
+        @media (max-width: 600px) {
+            .edu-growth-title {
+                font-size: 20px;
+            }
+            .edu-growth-content {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hor_row"></div>
+    <div class="main-container">
+        <h1 class="main-heading"><span class="icon">&#x25BA;</span>	Igniting Minds, Shaping Futures </h1>
+        <p class="main-para">(Educational Development)</p>    
+    </div>
+    <div class="hor_row"></div>
+
+    <!-- First Container (Images Right, Text Left) -->
+    <div class="container">
+        <div class="content">
+        <div class="text-section">
+            <h1>Building Future Leaders at Jeevan Samvardhan Foundation</h1>
+            <p>When we started at Jeevan Samvardhan Foundation, our aim was to empower students with life-changing skills.</p>
+            <p>Through structured modules on Personality Development, Leadership, and Skill Building, we transformed hesitant learners into confident speakers and proactive leaders. Beyond academics, we celebrated festivals, birthdays, and national events, fostering emotional connections. </p>
+            <p>Annual Diwali Ank boosts thinking and problem-solving skills.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Over 100 students showed significant improvements in confidence, leadership, and communication</p>
+        </div>
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="assets/images/events-2024/PDS-2-2024/PSD-23rd-jun-2-1.jpg" alt="Wildlife Image 1">
+                <img src="assets\images\events-2023\5th-Nov-2023-JSF/5-Nov-2023-1.1.jpg" alt="Wildlife Image 2">
+                <img src="assets\images\events-2024\PDS-1-2024\Personality_development_session-2024-1-4.jpg" alt="Wildlife Image 1">
+                <img src="assets\images\events-2023\15-oct-2023\15-Oct-2023-2.jpg" alt="Wildlife Image 2">
+                <img src="assets/images/events-2024/PDS-3-2024/PSD-14th-jul-3-4.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/events-2024/LDS-4-2024/LDS-13th-Oct-4-4.jpg" alt="Wildlife Image 2">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="hor_row"></div> -->
+
+    <!-- for mobile view -->
+    <div class="container-mobile">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="assets/images/events-2024/PDS-2-2024/PSD-23rd-jun-2-1.jpg" alt="Wildlife Image 1">
+                <img src="assets\images\events-2023\5th-Nov-2023-JSF/5-Nov-2023-1.1.jpg" alt="Wildlife Image 2">
+                <img src="assets\images\events-2024\PDS-1-2024\Personality_development_session-2024-1-4.jpg" alt="Wildlife Image 1">
+                <img src="assets\images\events-2023\15-oct-2023\15-Oct-2023-2.jpg" alt="Wildlife Image 2">
+                <img src="assets/images/events-2024/PDS-3-2024/PSD-14th-jul-3-4.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/events-2024/LDS-4-2024/LDS-13th-Oct-4-4.jpg" alt="Wildlife Image 2">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>Building Future Leaders at Jeevan Samvardhan Foundation</h1>
+            <p>When we started at Jeevan Samvardhan Foundation, our aim was to empower students with life-changing skills.</p>
+            <p>Through structured modules on Personality Development, Leadership, and Skill Building, we transformed hesitant learners into confident speakers and proactive leaders. Beyond academics, we celebrated festivals, birthdays, and national events, fostering emotional connections. </p>
+            <p>The annual Diwali Ank, filled with engaging educational content, became a tradition, enhancing critical thinking and problem-solving skills.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Over 100 students showed significant improvements in confidence, leadership, and communication</p>
+        </div>
+        
+    </div>
+    </div>
+
+    <!-- Second Container (Images Left, Text Right) -->
+    <div class="re-container">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-2')">&#10094;</button>
+            <div class="image-section" id="image-section-2">
+                <img src="assets\images\hostelvisitankur.jpg" alt="Wildlife Image 3">
+                <img src="assets/images/ankur2july.jpg" alt="Wildlife Image 4">
+                <img src="assets/images/ankur10july.jpg" alt="Wildlife Image 3">
+                <img src="assets/images/ankur17july.jpg" alt="Wildlife Image 4">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-2')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>A Small Start at Ankur Balvikas Kendra</h1>
+            <p>At Ankur Balvikas Kendra, we conducted life-skill sessions on self-awareness and personal growth. </p>
+            <p>Although brief, these sessions sparked curiosity and personal improvement among the children.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp;Introduced new perspectives to inspire self-improvement.</p>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="hor_row"></div> -->
+
+    <!-- Third Container (Images Right, Text Left) -->
+    <div class="container">
+        <div class="content">
+        <div class="text-section">
+            <h1>Supporting Young Minds at Satkarma Balakashram</h1>
+            <p>We focused on fostering critical thinking and self-expression through fundamental learning sessions and provided essential resources to aid their growth.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Holistic learning strengthened children’s skills beyond textbooks. </p>
+        </div>
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="assets/images/events-2023/30-Jul-2023/Jul-30-2023-1.jpg" alt="Wildlife Image 1">
+                <img src="assets\images\events-2023\5th-Nov-2023-satkarma\5-Nov-2023-1.jpg" alt="Wildlife Image 2">
+                <img src="assets\images\events-2023\5th-Nov-2023-satkarma\5-Nov-2023-2.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/events-2023/30-Jul-2023/Jul-30-2023-3.jpg" alt="Wildlife Image 2">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- third for mobile view -->
+    <div class="container-mobile">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="assets/images/events-2023/30-Jul-2023/Jul-30-2023-1.jpg" alt="Wildlife Image 1">
+                <img src="assets\images\events-2023\5th-Nov-2023-satkarma\5-Nov-2023-1.jpg" alt="Wildlife Image 2">
+                <img src="assets\images\events-2023\5th-Nov-2023-satkarma\5-Nov-2023-2.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/events-2023/30-Jul-2023/Jul-30-2023-3.jpg" alt="Wildlife Image 2">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>Supporting Young Minds at Satkarma Balakashram</h1>
+            <p>We focused on fostering critical thinking and self-expression through fundamental learning sessions and provided essential resources to aid their growth.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Holistic learning strengthened children’s skills beyond textbooks. </p>
+        </div>
+        
+    </div>
+    </div>
+    <!-- <div class="hor_row"></div> -->
+
+    <!-- Fourth Container (Images Left, Text Right) -->
+    <div class="re-container">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-2')">&#10094;</button>
+            <div class="image-section" id="image-section-2">
+                <img src="assets/images/events-2023/30-Jul-2023/Jul-30-2023-2.jpg" alt="Wildlife Image 3">
+                <img src="assets/images/GYCx Swadhey.jpg" alt="Wildlife Image 4">
+                <img src="assets/images/jsf-visit-2.jpg" alt="Wildlife Image 3">
+                <img src="assets/images/jsf-visit.jpg" alt="Wildlife Image 4">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-2')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>Power of Collaboration – Geolife Youth Club & Tech for Education</h1>
+            <p>Recognizing resource gaps, we partnered with Geolife Youth Club to distribute 250-300 notebooks and with Tech for Education to provide digital devices like mobiles and tablets.  </p>
+            <p>These initiatives bridged the digital divide for many students.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Enabled access to digital education, enhancing learning opportunities.</p>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="hor_row"></div> -->
+
+
+    <!-- Fifth Container (Images Right, Text Left) -->
+    <div class="container">
+        <div class="content">
+        <div class="text-section">
+            <h1>Empowering Through Play – NSS Team’s Engagement</h1>
+            <p>Through collaboration with the NSS team, we introduced fun, skill-building games that fostered teamwork, communication, and problem-solving in one of our partnered hostels.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Students developed essential life skills through interactive play.</p>
+        </div>
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="assets/images/hostel25sept.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/hostel25sept-1.jpg" alt="Wildlife Image 2">
+                <img src="assets/images/hostel25sept-2.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/hostel25sept-4.jpg" alt="Wildlife Image 2">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- fifth for mobile -->
+    <div class="container-mobile">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="assets/images/hostel25sept.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/hostel25sept-1.jpg" alt="Wildlife Image 2">
+                <img src="assets/images/hostel25sept-2.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/hostel25sept-4.jpg" alt="Wildlife Image 2">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>Empowering Through Play – NSS Team’s Engagement</h1>
+            <p>Through collaboration with the NSS team, we introduced fun, skill-building games that fostered teamwork, communication, and problem-solving in one of our partnered hostels.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Students developed essential life skills through interactive play.</p>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="hor_row"></div> -->
+
+    <!-- Sixth Container (Images Left, Text Right) -->
+    <div class="re-container">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-2')">&#10094;</button>
+            <div class="image-section" id="image-section-2">
+                <img src="assets/images/diwaliank2022-3.jpg" alt="Wildlife Image 3">
+                <img src="assets/images/diwaliank.jpg" alt="Wildlife Image 4">
+                <img src="assets/images/diwaliank2022-2.jpg" alt="Wildlife Image 3">
+                <img src="assets/images/Diwali_ank_extra_1-1.jpg" alt="Wildlife Image 4">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-2')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>Diwali Ank – Learning Beyond Textbooks</h1>
+            <p>Our annual Diwali Ank reaches multiple hostels, packed with exciting content on Maths, English, History, and Logical Thinking.   </p>
+            <p>This initiative encourages independent learning and curiosity among students.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Nurtured a habit of self-learning and exploration.</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="edu-growth-container">
+        <!-- <div class="edu-growth-emoji">🌱</div> -->
+        <div class="edu-growth-title1">Together, We Educate. Together, We Grow.</div>
+        <div class="edu-growth-content1">
+            Through mentorship, collaboration, and innovation, we light the path for young minds, building a brighter future for all.
+        </div>
+        <!-- <div class="edu-growth-emoji">🌱</div> -->
+    </div>
+
+
+    <div class="hor_row"></div>
+
+
+
+    <div class="main-container">
+        <h1 class="main-heading"><span class="icon">&#x25BA;</span>	Extending Hands, Transforming Lives  </h1>
+        <p class="main-para">(Social Welfare & Community Support)</p>    
+    </div>
+    <div class="hor_row"></div>
+
+    <!-- First Container (Images Right, Text Left) -->
+    <div class="container">
+        <div class="content">
+        <div class="text-section">
+            <h1>Support for Old Age Homes</h1>
+            <p>We believe in giving back to the community by supporting and connecting with the elderly, showing them the care and respect they deserve.</p>
+            <p>-	Janiv Vruddhashram: On our 1st anniversary, we organized a cleanliness drive with volunteers, improving the home's environment. On Valentine’s Day, we returned to spend time with the elderly, listening to their stories and gifting books to brighten their day.</p>
+            <p>-	Vimalatadevi Old Age Home : We provided food donations and companionship to the residents, showing them care and respect. We provided food donations and companionship to the residents, showing them care and respect.</p>
+            <!-- <p>-	Support to Needy Family : During the rainy season, we helped a family in Ulhasnagar by arranging a rented home for three months and providing medical assistance to stabilize their living conditions</p> -->
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Through our visits to Janiv Vruddhashram and Vimalatadevi Old Age Home, we brought joy, companionship, and care to the elderly. Our efforts not only improved their living environment but also created heartfelt moments of connection and respect.</p>
+        </div>
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="assets/images/shramdan.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/shramdan-5.jpg" alt="Wildlife Image 2">
+                <img src="assets/images/valentineday.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/valentineday-1.jpg" alt="Wildlife Image 2">
+                <img src="assets/images/events-2023/18-Jun-2023/Jun-18-2023-1.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/events-2023/18-Jun-2023/Jun-18-2023-4.jpg" alt="Wildlife Image 2">
+                <img src="assets/images/events-2023/18-Jun-2023/Jun-18-2023-3.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/events-2023/18-Jun-2023/old_age_home_extra_1-1.jpg" alt="Wildlife Image 2">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- first mobile view -->
+    <div class="container-mobile">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="assets/images/shramdan.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/shramdan-5.jpg" alt="Wildlife Image 2">
+                <img src="assets/images/valentineday.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/valentineday-1.jpg" alt="Wildlife Image 2">
+                <img src="assets/images/events-2023/18-Jun-2023/Jun-18-2023-1.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/events-2023/18-Jun-2023/Jun-18-2023-4.jpg" alt="Wildlife Image 2">
+                <img src="assets/images/events-2023/18-Jun-2023/Jun-18-2023-3.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/events-2023/18-Jun-2023/old_age_home_extra_1-1.jpg" alt="Wildlife Image 2">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>Support for Old Age Homes</h1>
+            <p>We believe in giving back to the community by supporting and connecting with the elderly, showing them the care and respect they deserve.</p>
+            <p>-	Janiv Vruddhashram: On our 1st anniversary, we organized a cleanliness drive with volunteers, improving the home's environment. On Valentine’s Day, we returned to spend time with the elderly, listening to their stories and gifting books to brighten their day.</p>
+            <p>-	Vimalatadevi Old Age Home : We provided food donations and companionship to the residents, showing them care and respect. We provided food donations and companionship to the residents, showing them care and respect.</p>
+            <!-- <p>-	Support to Needy Family : During the rainy season, we helped a family in Ulhasnagar by arranging a rented home for three months and providing medical assistance to stabilize their living conditions</p> -->
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Through our visits to Janiv Vruddhashram and Vimalatadevi Old Age Home, we brought joy, companionship, and care to the elderly. Our efforts not only improved their living environment but also created heartfelt moments of connection and respect.</p>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="hor_row"></div> -->
+
+    <!-- Second Container (Images Left, Text Right) -->
+    <div class="re-container">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-2')">&#10094;</button>
+            <div class="image-section" id="image-section-2">
+                <img src="assets/images/covid-2.jpg" alt="Wildlife Image 3">
+                <img src="assets/images/covid-4.jpg" alt="Wildlife Image 4">
+                <img src="assets/images/covid-5.jpg" alt="Wildlife Image 3">
+                <img src="assets/images/covid-8.jpg" alt="Wildlife Image 4">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-2')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>Food & Essentials Distribution</h1>
+            <p><b>Covid-19 Pandemic:</b> During the COVID-19 pandemic, we ran a 50-day Food Distribution Drive, delivering 100 meals daily to those struggling due to the crisis.We started spreading awareness among people through Swadhey where people started helping us by donating and we started food distribution to the needy ones. </p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Supported over 5,000 people during the pandemic with essential supplies.</p>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="hor_row"></div> -->
+
+    <!-- Third Container (Images Right, Text Left) -->
+    <div class="container">
+        <div class="content">
+        <div class="text-section">
+            <h1>Health Camps & Awareness</h1>
+            <p>We are dedicated to improving the health and well-being of communities through free health camps and awareness initiatives.</p>
+            <p>-	Ayurvedic Health Camps: Over 300 individuals benefited from free consultations and medicines, promoting natural healing.</p>
+            <p>-	Ayushman Bharat Camp: We issued health insurance cards to over 100 individuals, ensuring access to essential medical care.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Enhanced health and medical access.</p>
+        </div>
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="assets/images/events-2023/22-Oct-2023/22-Oct-2023-4.jpg" alt="Wildlife Image 1">
+                <img src="assets\images\healthcamp1.jpg" alt="Wildlife Image 2">
+                <img src="assets\images\healthcamp3-1.jpg" alt="Wildlife Image 1">
+                <img src="assets\images\healthcamp3.jpg" alt="Wildlife Image 2">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- third mobile view -->
+    <div class="container-mobile">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="assets/images/events-2023/22-Oct-2023/22-Oct-2023-4.jpg" alt="Wildlife Image 1">
+                <img src="assets\images\healthcamp1.jpg" alt="Wildlife Image 2">
+                <img src="assets\images\healthcamp3-1.jpg" alt="Wildlife Image 1">
+                <img src="assets\images\healthcamp3.jpg" alt="Wildlife Image 2">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>Health Camps & Awareness</h1>
+            <p>We are dedicated to improving the health and well-being of communities through free health camps and awareness initiatives.</p>
+            <p>-	Ayurvedic Health Camps: Over 300 individuals benefited from free consultations and medicines, promoting natural healing.</p>
+            <p>-	Ayushman Bharat Camp: We issued health insurance cards to over 100 individuals, ensuring access to essential medical care.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Improved community health and access to medical support.</p>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="hor_row"></div> -->
+
+    <!-- Fourth Container (Images Left, Text Right) -->
+    <div class="re-container">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-2')">&#10094;</button>
+            <div class="image-section" id="image-section-2">
+                <img src="assets/images/Kokan-Flood/1.jpg" alt="Wildlife Image 3">
+                <img src="assets/images/nisarga.jpg" alt="Wildlife Image 4">
+                <img src="assets/images/Kokan-Flood/helptowardskokanflood-1.jpg" alt="Wildlife Image 3">
+                <img src="assets/images/Kokan-Flood/helptowardskokanflood.jpg" alt="Wildlife Image 4">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-2')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>Disaster Emergency Support</h1>
+            <p>In times of crisis, we believe in extending our support to affected communities, providing both immediate relief and long-term assistance to those in need.</p>
+            <p>-	Nisarg Cyclone – Dapoli:- We provided financial assistance to families in Dapoli, helping them rebuild after the disaster.</p>
+            <p>-	Flood Relief – Chiplun:- Partnering with Ashwamedh Foundation, we distributed food and clothes to flood victims, addressing immediate needs.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Delivered timely aid to disaster-affected communities.</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="edu-growth-container">
+        <!-- <div class="edu-growth-emoji">🌱</div> -->
+        <div class="edu-growth-title2">Together, We Care. Together, We Transform.</div>
+        <div class="edu-growth-content2">
+            From supporting the elderly to aiding disaster-hit communities, our efforts are driven by the belief that every act of kindness has the power to change lives.
+        </div>
+        <!-- <div class="edu-growth-emoji">🌱</div> -->
+    </div>
+    <div class="hor_row"></div>
+
+
+    <div class="main-container">
+        <h1 class="main-heading"><span class="icon">&#x25BA;</span>Reviving & Restoring Nature </h1>
+        <p class="main-para">(Environmental Conservation Initiatives)</p>    
+        <p class="main-para">We are dedicated to protecting and rejuvenating the environment through impactful actions like beach cleanups and tree plantations, fostering a cleaner and greener future.</p>
+    </div>
+    <div class="hor_row"></div>
+
+    <!-- First Container (Images Right, Text Left) -->
+    <div class="container">
+        <div class="content">
+        <div class="text-section">
+            <h1>Beach Cleanup Drives</h1>
+            <p>In 2022, we launched the Arnala Beach Cleaning Project to restore the coastal environment.</p>
+            <p>Through eight impactful drives, volunteers removed significant amounts of waste while raising awareness among locals and tourists. </p>
+            <p>Dustbins were distributed, encouraging responsible waste disposal. This initiative thrived in collaboration with Arnala Social Work Group, a long-standing advocate for beach conservation.</p>
+            <p>This collective effort not only revived the beach’s beauty but also fostered a lasting sense of environmental responsibility.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp;Cleaner beaches, increased awareness, and active community participation.</p>
+        </div>
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="assets\images\events-2023\5th-Nov-2023-beach\5-Nov-2023-3.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/beachcleaning3.jpg" alt="Wildlife Image 2">
+                <img src="assets/images/beachcleaning2-3.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/beachcleaning6-3.jpg" alt="Wildlife Image 2">
+                <img src="assets/images/events-2023/16-Sep-2023/Sep-16-2023-1.jpg" alt="Wildlife Image 2">
+                <img src="assets\images\beachcleaning26thfeb.jpg" alt="Wildlife Image 1">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- first mobile view -->
+    <div class="container-mobile">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="assets\images\events-2023\5th-Nov-2023-beach\5-Nov-2023-3.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/beachcleaning3.jpg" alt="Wildlife Image 2">
+                <img src="assets/images/beachcleaning2-3.jpg" alt="Wildlife Image 1">
+                <img src="assets/images/beachcleaning6-3.jpg" alt="Wildlife Image 2">
+                <img src="assets/images/events-2023/16-Sep-2023/Sep-16-2023-1.jpg" alt="Wildlife Image 2">
+                <img src="assets\images\beachcleaning26thfeb.jpg" alt="Wildlife Image 1">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>Beach Cleanup Drives</h1>
+            <p>In 2022, we launched the Arnala Beach Cleaning Project to restore the coastal environment.</p>
+            <p>Through eight impactful drives, volunteers removed significant amounts of waste while raising awareness among locals and tourists. </p>
+            <p>Dustbins were distributed, encouraging responsible waste disposal. This initiative thrived in collaboration with Arnala Social Work Group, a long-standing advocate for beach conservation.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp;Cleaner beaches, increased awareness, and active community participation.</p>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="hor_row"></div> -->
+
+    <!-- Second Container (Images Left, Text Right) -->
+    <div class="re-container">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-2')">&#10094;</button>
+            <div class="image-section" id="image-section-2">
+                <img src="assets/images/events-2023/17-Sep-2023/Sep-17-2023-2.jpg" alt="Wildlife Image 3">
+                <img src="assets/images/treeplantation1-4.jpg" alt="Wildlife Image 4">
+                <img src="assets/images/treeplantation1-2.jpg" alt="Wildlife Image 3">
+                <img src="assets/images/treeplantation1-1.jpg" alt="Wildlife Image 4">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-2')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>Tree Plantation for Ecological Balance</h1>
+            <p>In partnership with Arnala Social Work Group and Nanhe Hath Foundation, we organized tree plantation drives to restore ecological balance. </p>
+            <p>Volunteers actively planted saplings, contributing to greener landscapes and promoting sustainable environmental practices.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Strengthened green cover and reinforced environmental sustainability.</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="edu-growth-container">
+        <!-- <div class="edu-growth-emoji">🌱</div> -->
+        <div class="edu-growth-title3">Together for Nature. Together for Tomorrow.</div>
+        <div class="edu-growth-content3">
+            Our journey toward conservation is fueled by the belief that small acts create lasting change for our planet.
+        </div>
+        <!-- <div class="edu-growth-emoji">🌱</div> -->
+    </div>
+    <div class="hor_row"></div>
+
+    <div class="main-container">
+        <h1 class="main-heading"><span class="icon">&#x25BA;</span>	Honoring Legacy, Inspiring Change </h1>
+        <p class="main-para">(Cultural & Awareness Campaigns)</p> 
+        <p class="main-para">Celebrating our rich heritage and inspiring change through meaningful tributes, conservation efforts, and awareness initiatives that honor history and shape the future.</p>   
+    </div>
+    <div class="hor_row"></div>
+
+    <!-- First Container (Images Right, Text Left) -->
+    <div class="container">
+        <div class="content">
+        <div class="text-section">
+            <h1>Chatrapati Shivaji Maharaj Jayanti</h1>
+            <p>Every year, we celebrate Shiv Jayanti by distributing snacks and water to modern-day Mavalas—the dedicated policemen who tirelessly serve and protect us.</p>
+            <p>Over the past four years, we have distributed around 300-400 snack boxes and 500 water bottles annually across Maharashtra as a token of gratitude for their service. </p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Fostered appreciation for law enforcement and honored Maharaj's legacy of bravery.</p>
+        </div>
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 1">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 2">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 1">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 2">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- first mobile view -->
+    <div class="container-mobile">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 1">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 2">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 1">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 2">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>Chatrapati Shivaji Maharaj Jayanti</h1>
+            <p>Every year, we celebrate Shiv Jayanti by distributing snacks and water to modern-day Mavalas—the dedicated policemen who tirelessly serve and protect us.</p>
+            <p>Over the past four years, we have distributed around 300-400 snack boxes and 500 water bottles annually across Maharashtra as a token of gratitude for their service. </p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Fostered appreciation for law enforcement and honored Maharaj's legacy of bravery.</p>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="hor_row"></div> -->
+
+    <!-- Second Container (Images Left, Text Right) -->
+    <div class="re-container">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-2')">&#10094;</button>
+            <div class="image-section" id="image-section-2">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 3">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 4">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-2')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>Durg Dipotsav</h1>
+            <p>Durg Dipotsav is our initiative to honor Chhatrapati Shivaji Maharaj by celebrating at historical forts. Activities include cleaning fort surroundings, creating rangolis, and lighting traditional Diwali diyas, first at Maharaj’s statue and then at home.  </p>
+            <p>This campaign highlights the importance of fort conservation and heritage preservation.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp; Increased awareness about heritage conservation while spreading cultural values.</p>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="hor_row"></div> -->
+
+    <!-- Third Container (Images Right, Text Left) -->
+    <div class="container">
+        <div class="content">
+        <div class="text-section">
+            <h1>Fort Conservation Activity</h1>
+            <p>We conducted cleanup drives at Dronagiri Fort in Uran, focusing on maintaining these historical landmarks and spreading awareness about responsible tourism.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp;Preservation of historical sites and strengthened public involvement in conservation.</p>
+        </div>
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 1">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 2">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 1">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 2">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- third mobile view -->
+    <div class="container-mobile">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-1')">&#10094;</button>
+            <div class="image-section" id="image-section-1">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 1">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 2">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 1">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 2">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-1')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>Fort Conservation Activity</h1>
+            <p>We conducted cleanup drives at Dronagiri Fort in Uran, focusing on maintaining these historical landmarks and spreading awareness about responsible tourism.</p>
+            <p class="impact-cls"><span class="impact-head">Impact:</span>&nbsp;Preservation of historical sites and strengthened public involvement in conservation.</p>
+        </div>
+    </div>
+    </div>
+    <!-- <div class="hor_row"></div> -->
+
+    <!-- Fourth Container (Images Left, Text Right) -->
+    <div class="re-container">
+        <div class="content">
+        <div class="image-wrapper">
+            <button class="scroll-btn prev-btn" onclick="scrollImages(-1, 'image-section-2')">&#10094;</button>
+            <div class="image-section" id="image-section-2">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 3">
+                <img src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Download-Wildlife-Image.jpg" alt="Wildlife Image 4">
+            </div>
+            <button class="scroll-btn next-btn" onclick="scrollImages(1, 'image-section-2')">&#10095;</button>
+        </div>
+        <div class="text-section">
+            <h1>Other Awareness Campaigns</h1>
+            <p>-	Rakhi for Rakshak: We gathered handwritten letters and rakhis from the public, sending them to soldiers as an expression of gratitude during Raksha Bandhan, fostering a sense of connection and appreciation for our nation's defenders.  </p>
+            <p>-	Independence Day Celebrations: Celebrated in various hostels and NGOs, fostering patriotism and educating orphaned children about the significance of freedom.</p>
+            <p>-	Tribute to Great Leaders: Commemorated the birth anniversaries of influential leaders in orphanages, sharing their life stories and contributions to society to inspire the younger generation.</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="edu-growth-container">
+        <div class="edu-growth-emoji">🌟</div>
+        <div class="edu-growth-title4">Honoring History, Inspiring a Brighter Tomorrow.</div>
+        <div class="edu-growth-content4">
+            Through our cultural initiatives and awareness campaigns, we are proud to preserve heritage, educate young minds, and pay tribute to the changemakers who shaped our nation.
+        </div>
+        <div class="edu-growth-emoji">🌟</div>
+    </div>
+    <!-- <div class="hor_row"></div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function scrollImages(direction, sectionId) {
+            const container = document.getElementById(sectionId);
+            const scrollAmount = container.clientWidth;
+            container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+    </script>
+        
+
+        
+    
+</body>
+</html>
