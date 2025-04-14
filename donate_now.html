@@ -203,43 +203,47 @@
       <form id="donationForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeCHlUt5tuVyzSO-iEuQukb1FSiVTROdqyZHXcX0Iz7KaTKKw/formResponse">
         <div>
           <label class="required" name="entry.1277231147" id="col-head">Full Name</label>
-          <input type="text" name="entry.1277231147" required pattern="^[a-zA-Z\s]+$" title="No special characters allowed" />
+          <input type="text" name="entry.1277231147" placeholder="Enter Full Name" required pattern="^[a-zA-Z\s]+$" title="No special characters allowed" />
         </div>
         <div>
-          <label id="col-head" name="entry.1320730255">Date of Birth</label>
-          <input type="date" name="entry.1320730255"/>
+          <label class="required" id="col-head" name="entry.1320730255">Date of Birth</label>
+          <input type="date" name="entry.1320730255" placeholder="Enter your DOB" required />
         </div>
         <div>
           <label class="required" id="col-head" name="entry.1879770535">Email</label>
-          <input type="email" name="entry.1879770535" required />
+          <input type="email" name="entry.1879770535" placeholder="Enter your Email" required />
         </div>
         <div>
           <label class="required" name="entry.826308141" id="col-head">Mobile Number</label>
-          <input type="tel" name="entry.826308141" required pattern="[0-9]{10}" title="Enter 10-digit number"/>
+          <input type="tel" name="entry.826308141" placeholder="Enter your Number" required pattern="[0-9]{10}" title="Enter 10-digit number"/>
         </div>
         <div class="full-width">
           <label class="required" name="entry.1096252026" id="col-head">Address</label>
-          <input type="text" name="entry.1096252026" required />
+          <input type="text" name="entry.1096252026" placeholder="Enter your Address" required />
         </div>
         <div>
-          <label id="col-head" name="entry.1136764332">Pincode</label>
-          <input type="text" name="entry.1136764332" id="pincode" maxlength="6" oninput="autoFill()" />
+          <label class="required" id="col-head" name="entry.1136764332">Pincode</label>
+          <input type="text" name="entry.1136764332" placeholder="Enter your Pincode" id="pincode" maxlength="6" oninput="autoFill()" required/>
         </div>
         <div>
-          <label id="col-head" name="entry.1124391908">City</label>
-          <input type="text" name="entry.1124391908" id="city" />
+          <label class="required" id="col-head" name="entry.1124391908">City</label>
+          <input type="text" name="entry.1124391908" placeholder="Enter your City" id="city" required />
         </div>
         <div>
-          <label id="col-head" name="entry.500172488">State</label>
-          <input type="text" name="entry.500172488" id="state" />
+          <label class="required" id="col-head" name="entry.500172488">State</label>
+          <input type="text" name="entry.500172488" placeholder="Enter your State" id="state" required />
         </div>
         <div>
-          <label id="col-head" name="entry.35358695">Country</label>
-          <input type="text" name="entry.35358695" value="INDIA" readonly />
+          <label class="required" id="col-head" name="entry.35358695">Country</label>
+          <input type="text" name="entry.35358695" placeholder="Enter your Country" value="INDIA" readonly />
         </div>
         <div class="full-width">
-          <label id="col-head" name="entry.1541715760">PAN Number</label>
-          <input type="text" name="entry.1541715760" />
+          <label class="required" id="col-head" name="entry.1541715760">PAN Number</label>
+          <input type="text" name="entry.1541715760" placeholder="Enter your PAN Number" required />
+        </div>
+        <div class="full-width">
+          <label class="required" id="col-head" name="entry.62488950">Amount</label>
+          <input type="text" placeholder="Enter your Amount" name="entry.62488950" required />
         </div>
         <div class="notice">
           Please note that if you do not provide your PAN Number, you will not be able to claim 50% tax exemption u/s 80G in India.
