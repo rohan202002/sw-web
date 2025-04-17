@@ -321,14 +321,14 @@
         </div>
         <div>
           <label class="required" id="col-head" name="entry.35358695">Country</label>
-          <input type="text" name="entry.35358695" placeholder="Enter your Country" value="INDIA" readonly />
+          <input type="text" name="entry.35358695" placeholder="Enter your Country" required />
         </div>
         <div class="full-width">
           <label class="required" id="col-head" name="entry.1541715760">PAN Number</label>
           <input type="text" name="entry.1541715760" placeholder="Enter your PAN Number" required />
         </div>
         <div class="full-width">
-          <label class="required" id="col-head" name="entry.62488950">Amount</label>
+          <label class="required" id="col-head" name="entry.62488950">Amount to be Donated</label>
           <input type="text" placeholder="Enter your Amount" name="entry.62488950" required />
         </div>
         <div class="notice">
@@ -377,7 +377,7 @@
       mode: "no-cors",
       body: formData
     }).then(() => {
-      alert("✅ Thank you! Your form has been successfully submitted.");
+      alert("✅ Thank you !!");
       window.location.href = "Scan-Pay.html"; // Your custom redirect page
     }).catch((err) => {
       alert("❌ There was a problem submitting your form. Please try again.");
