@@ -481,3 +481,10 @@
 .dropdown-menu {
     min-width: 13rem;
 }
+
+
+@media (max-width: 600px) {
+    .insta-button {
+    padding: 119px 35px !important;
+    }
+    }
